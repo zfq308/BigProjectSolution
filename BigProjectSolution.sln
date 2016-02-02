@@ -100,6 +100,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "100_ThirdLibraries", "100_T
 		BigProject.CommonFiles\ThirdLibraryReadme.txt = BigProject.CommonFiles\ThirdLibraryReadme.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigProject.SpecificModule.BusinessTests", "BigProject.SpecificModule.BusinessTests\BigProject.SpecificModule.BusinessTests.csproj", "{CD564F81-6716-46F4-80C5-0F8D83302616}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "600_DemoTest", "600_DemoTest", "{FC656D6A-34E0-4E37-A753-DBC05FD85484}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -190,6 +194,10 @@ Global
 		{4B885BF1-33C6-412E-B8F0-A3D9D2DAECC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B885BF1-33C6-412E-B8F0-A3D9D2DAECC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B885BF1-33C6-412E-B8F0-A3D9D2DAECC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD564F81-6716-46F4-80C5-0F8D83302616}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD564F81-6716-46F4-80C5-0F8D83302616}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD564F81-6716-46F4-80C5-0F8D83302616}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD564F81-6716-46F4-80C5-0F8D83302616}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -216,5 +224,6 @@ Global
 		{665D04B8-D1A0-4EB2-9737-F29177DFC2FE} = {A3AC2968-D9FD-4BF1-B4C8-875A28803EC7}
 		{24E66B3E-57AB-4677-BE50-C624BDE373D8} = {A3AC2968-D9FD-4BF1-B4C8-875A28803EC7}
 		{4B885BF1-33C6-412E-B8F0-A3D9D2DAECC8} = {A3AC2968-D9FD-4BF1-B4C8-875A28803EC7}
+		{CD564F81-6716-46F4-80C5-0F8D83302616} = {DA1D368C-6C28-4A5E-AB1F-713BD6A2EE08}
 	EndGlobalSection
 EndGlobal

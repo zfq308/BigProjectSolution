@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BigProject.CommonModel
 {
-    public class Class1
+    public class Constants
     {
     }
 }
