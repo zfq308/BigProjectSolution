@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{468CB0E5-2675-45AB-A8B5-4C85AB67DEB7}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{DAF3E855-3357-4C27-9621-1762AC611585}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BigProject.SpecificModule.DataAccessLayer.MemcachedLayer</RootNamespace>
-    <AssemblyName>BigProject.SpecificModule.DataAccessLayer.MemcachedLayer</AssemblyName>
+    <RootNamespace>BigProject.DemoTest.FirstDemo</RootNamespace>
+    <AssemblyName>BigProject.DemoTest.FirstDemo</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,8 +42,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BigProject.SpecificModule.DataAccessLayer.SQLServer\BigProject.SpecificModule.DataAccessLayer.SQLServer.csproj">
+      <Project>{8aeff450-8a1f-4cd4-aa7c-7d6b9bf7bba2}</Project>
+      <Name>BigProject.SpecificModule.DataAccessLayer.SQLServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BigProject.SpecificModule.Data\BigProject.SpecificModule.DataAccessLayer.csproj">
+      <Project>{3d7a0ea2-c588-4762-910c-34f22ef379a8}</Project>
+      <Name>BigProject.SpecificModule.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BigProject.SpecificModule.Model\BigProject.SpecificModule.Model.csproj">
+      <Project>{24e66b3e-57ab-4677-be50-c624bde373d8}</Project>
+      <Name>BigProject.SpecificModule.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BigProject.SpecificModuler.DataInterfaceLayer\BigProject.SpecificModule.DataInterfaceLayer.csproj">
+      <Project>{a4323c7f-73d4-4a20-99c8-720206b2a75b}</Project>
+      <Name>BigProject.SpecificModule.DataInterfaceLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
