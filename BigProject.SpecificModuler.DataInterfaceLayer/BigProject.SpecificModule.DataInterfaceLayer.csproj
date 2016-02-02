@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{468CB0E5-2675-45AB-A8B5-4C85AB67DEB7}</ProjectGuid>
+    <ProjectGuid>{A4323C7F-73D4-4A20-99C8-720206B2A75B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BigProject.SpecificModule.DataAccessLayer.MemcachedLayer</RootNamespace>
-    <AssemblyName>BigProject.SpecificModule.DataAccessLayer.MemcachedLayer</AssemblyName>
+    <RootNamespace>BigProject.SpecificModule.DataInterfaceLayer</RootNamespace>
+    <AssemblyName>BigProject.SpecificModule.DataInterfaceLayer</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -31,11 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Enyim.Caching, Version=2.13.0.0, Culture=neutral, PublicKeyToken=cec98615db04012e, processorArchitecture=MSIL">
-      <HintPath>..\packages\EnyimMemcached.2.13\lib\net35\Enyim.Caching.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,16 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DatabaseOperations.cs" />
+    <Compile Include="DBTypeAdapter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BigProject.Utils\BigProject.Utils.csproj">
-      <Project>{f333379d-e2d5-423e-9efd-cef7596b75f7}</Project>
-      <Name>BigProject.Utils</Name>
+    <ProjectReference Include="..\BigProject.SpecificModule.Model\BigProject.SpecificModule.Model.csproj">
+      <Project>{24e66b3e-57ab-4677-be50-c624bde373d8}</Project>
+      <Name>BigProject.SpecificModule.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

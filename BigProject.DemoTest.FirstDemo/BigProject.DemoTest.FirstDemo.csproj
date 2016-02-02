@@ -49,6 +49,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BigProject.SpecificModule.DataAccessLayer.MemcachedLayer\BigProject.SpecificModule.DataAccessLayer.MemcachedLayer.csproj">
+      <Project>{468cb0e5-2675-45ab-a8b5-4c85ab67deb7}</Project>
+      <Name>BigProject.SpecificModule.DataAccessLayer.MemcachedLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BigProject.SpecificModule.DataAccessLayer.SQLServer\BigProject.SpecificModule.DataAccessLayer.SQLServer.csproj">
       <Project>{8aeff450-8a1f-4cd4-aa7c-7d6b9bf7bba2}</Project>
       <Name>BigProject.SpecificModule.DataAccessLayer.SQLServer</Name>

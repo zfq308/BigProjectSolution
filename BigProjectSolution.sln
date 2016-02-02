@@ -34,7 +34,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigProject.SpecificModule.W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigProject.SpecificModule.WebAPI.Tests", "BigProject.SpecificModule.WebAPI.Tests\BigProject.SpecificModule.WebAPI.Tests.csproj", "{770A12C1-AE51-4A9D-A1BB-2838C70A75F2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "210_Auth", "210_Auth", "{5D5F80F7-FD0F-45D7-9924-E632A411D8C1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "210_CoreLibraries", "210_CoreLibraries", "{5D5F80F7-FD0F-45D7-9924-E632A411D8C1}"
 	ProjectSection(SolutionItems) = preProject
 		BigProject.CommonFiles\AUthReadme.txt = BigProject.CommonFiles\AUthReadme.txt
 	EndProjectSection
@@ -109,6 +109,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigProject.DemoTest.FirstDemo", "BigProject.DemoTest.FirstDemo\BigProject.DemoTest.FirstDemo.csproj", "{DAF3E855-3357-4C27-9621-1762AC611585}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigProject.SpecificModule.DataInterfaceLayer", "BigProject.SpecificModuler.DataInterfaceLayer\BigProject.SpecificModule.DataInterfaceLayer.csproj", "{A4323C7F-73D4-4A20-99C8-720206B2A75B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigProject.SpecificModule.DataAccessLayer.SQLServerTests", "BigProject.SpecificModule.DataAccessLayer.SQLServerTests\BigProject.SpecificModule.DataAccessLayer.SQLServerTests.csproj", "{965FCFE2-D2BE-4FC3-B300-BD68BDC15A15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -214,12 +216,16 @@ Global
 		{A4323C7F-73D4-4A20-99C8-720206B2A75B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4323C7F-73D4-4A20-99C8-720206B2A75B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4323C7F-73D4-4A20-99C8-720206B2A75B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{965FCFE2-D2BE-4FC3-B300-BD68BDC15A15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{965FCFE2-D2BE-4FC3-B300-BD68BDC15A15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{965FCFE2-D2BE-4FC3-B300-BD68BDC15A15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{965FCFE2-D2BE-4FC3-B300-BD68BDC15A15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{408CB391-640B-4705-9C45-962A2D54364B} = {30B2EFFF-6262-46D1-B6B6-C63EC4C7FC5C}
+		{408CB391-640B-4705-9C45-962A2D54364B} = {5D5F80F7-FD0F-45D7-9924-E632A411D8C1}
 		{FC102A8C-998C-4F88-9201-47CD418A8AA4} = {57B37DE4-FB4C-48A2-ADA5-C45EA132B54B}
 		{3D7A0EA2-C588-4762-910C-34F22EF379A8} = {5D11A98A-0B63-42E4-9168-5811B0817171}
 		{9E0222EA-790E-44FC-82C6-93BE65D6D1F9} = {39239748-386B-4861-8265-D345BC4B0364}
@@ -244,5 +250,6 @@ Global
 		{6FA88E4F-3FC4-43F9-A716-DF5B7EEB7B3B} = {DA1D368C-6C28-4A5E-AB1F-713BD6A2EE08}
 		{DAF3E855-3357-4C27-9621-1762AC611585} = {FC656D6A-34E0-4E37-A753-DBC05FD85484}
 		{A4323C7F-73D4-4A20-99C8-720206B2A75B} = {5D11A98A-0B63-42E4-9168-5811B0817171}
+		{965FCFE2-D2BE-4FC3-B300-BD68BDC15A15} = {DA1D368C-6C28-4A5E-AB1F-713BD6A2EE08}
 	EndGlobalSection
 EndGlobal

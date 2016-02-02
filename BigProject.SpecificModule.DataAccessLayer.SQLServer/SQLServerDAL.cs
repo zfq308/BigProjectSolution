@@ -35,17 +35,18 @@ namespace BigProject.SpecificModule.DataAccessLayer.SQLServer
             connectionstring = ConnectionString;
         }
 
+        public DataSet getlist(string p_inputparameter)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int AddEntity(DemoModel dm)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
-        int ISpecificModule_WO_Operations.AddEntity(DemoModel dm)
-        {
-            throw new NotImplementedException();
-        }
 
-
-        DataSet ISpecificModule_RO_Operations.getlist(string p_inputparameter)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
