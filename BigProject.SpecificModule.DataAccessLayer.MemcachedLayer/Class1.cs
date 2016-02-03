@@ -36,6 +36,8 @@ namespace BigProject.SpecificModule.DataAccessLayer.MemcachedLayer
             {
                 MemcachedClientConfiguration config = new MemcachedClientConfiguration();//创建配置参数
                 config.Protocol = MemcachedProtocol.Text;//随便哪个枚举都行
+
+                //协议修改成 config.Protocol = MemcachedProtocol.Text; 就可以加验证模式了。
                 //config.Authentication.Type = typeof(PlainTextAuthenticator);//设置验证模式
                 //config.Authentication.Parameters["userName"] = "memcache";//用户名参数
                 //config.Authentication.Parameters["password"] = "password";//密码参数
@@ -79,26 +81,26 @@ namespace BigProject.SpecificModule.DataAccessLayer.MemcachedLayer
         #endregion
 
 
-        public bool Store(string key, object value, out TimeSpan CostTime)
+        public bool Store(string key, object value, TimeSpan expiresTime = default(TimeSpan))
         {
 
-            Stopwatch sw = new Stopwatch();
-            sw.Start();
+            //Stopwatch sw = new Stopwatch();
+            //sw.Start();
             bool result = false;
-            result = mac.Store(StoreMode.Add, key, value.ToString());//写入
-            sw.Stop();
-            CostTime = sw.Elapsed;
+            result = mac.Store(StoreMode.Add, key, value, expiresTime);//写入
+            //sw.Stop();
+            //TimeSpan CostTime = sw.Elapsed;
             return result;
         }
 
-        public bool Update(string key, object value, out TimeSpan CostTime)
+        public bool Update(string key, object value, TimeSpan expiresTime = default(TimeSpan))
         {
-            Stopwatch sw = new Stopwatch();
-            sw.Start();
+            //Stopwatch sw = new Stopwatch();
+            //sw.Start();
             bool result = false;
-            result = mac.Store(StoreMode.Set, key, value.ToString());//写入
-            sw.Stop();
-            CostTime = sw.Elapsed;
+            result = mac.Store(StoreMode.Set, key, value, expiresTime);//写入
+            //sw.Stop();
+            //TimeSpan CostTime = sw.Elapsed;
             return result;
         }
 

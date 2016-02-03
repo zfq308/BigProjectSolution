@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Configuration;
+using BigProject.Utils;
+
 
 namespace BigProject.SpecificModule.DataAccessLayer
 {
@@ -147,7 +149,186 @@ namespace BigProject.SpecificModule.DataAccessLayer
 
         #endregion
 
+
+
+
+        private static List<string> _SpecificModule_SQLServer_SupportMutilDB_RO_ConnectionString;
+        public static List<string> SpecificModule_SQLServer_SupportMutilDB_RO_ConnectionString
+        {
+            get
+            {
+                var ConfigPath = ConfigurationManager.AppSettings["SpecificModule_SQLServer_RO_SupportMutilDatabase_ConnectionStringConfigFilePath"];
+                if (!string.IsNullOrEmpty(ConfigPath))
+                {
+                    string path = System.IO.Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, System.IO.Path.Combine(ConfigPath.Split('/')));
+                    StandardConfigFileReader scr = new StandardConfigFileReader(path);
+                    Dictionary<string, string> pairs = scr.AllConnectionStringPair;
+
+                    if (_SpecificModule_SQLServer_SupportMutilDB_RO_ConnectionString == null || _SpecificModule_SQLServer_SupportMutilDB_RO_ConnectionString.Count == 0)
+                    {
+                        _SpecificModule_SQLServer_SupportMutilDB_RO_ConnectionString = new List<string>();
+                        foreach (var item in pairs)
+                        {
+                            if (item.Key != "LocalSqlServer")
+                            {
+                                _SpecificModule_SQLServer_SupportMutilDB_RO_ConnectionString.Add(item.Value);
+                            }
+                        }
+                    }
+                }
+                return _SpecificModule_SQLServer_SupportMutilDB_RO_ConnectionString;
+            }
+        }
+
+
+        private static List<string> _SpecificModule_SQLServer_SupportMutilDB_WO_ConnectionString;
+        public static List<string> SpecificModule_SQLServer_SupportMutilDB_WO_ConnectionString
+        {
+            get
+            {
+                var ConfigPath = ConfigurationManager.AppSettings["SpecificModule_SQLServer_WO_SupportMutilDatabase_ConnectionStringConfigFilePath"];
+                if (!string.IsNullOrEmpty(ConfigPath))
+                {
+                    string path = System.IO.Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, System.IO.Path.Combine(ConfigPath.Split('/')));
+                    StandardConfigFileReader scr = new StandardConfigFileReader(path);
+                    Dictionary<string, string> pairs = scr.AllConnectionStringPair;
+
+                    if (_SpecificModule_SQLServer_SupportMutilDB_WO_ConnectionString == null || _SpecificModule_SQLServer_SupportMutilDB_WO_ConnectionString.Count == 0)
+                    {
+                        _SpecificModule_SQLServer_SupportMutilDB_WO_ConnectionString = new List<string>();
+                        foreach (var item in pairs)
+                        {
+                            if (item.Key != "LocalSqlServer")
+                            {
+                                _SpecificModule_SQLServer_SupportMutilDB_WO_ConnectionString.Add(item.Value);
+                            }
+                        }
+                    }
+                }
+                return _SpecificModule_SQLServer_SupportMutilDB_WO_ConnectionString;
+            }
+        }
+
+
+
+
+        private static List<string> _SpecificModule_MySQL_SupportMutilDB_RO_ConnectionString;
+        public static List<string> SpecificModule_MySQL_SupportMutilDB_RO_ConnectionString
+        {
+            get
+            {
+                var ConfigPath = ConfigurationManager.AppSettings["SpecificModule_MySQL_RO_SupportMutilDatabase_ConnectionStringConfigFilePath"];
+                if (!string.IsNullOrEmpty(ConfigPath))
+                {
+                    string path = System.IO.Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, System.IO.Path.Combine(ConfigPath.Split('/')));
+                    StandardConfigFileReader scr = new StandardConfigFileReader(path);
+                    Dictionary<string, string> pairs = scr.AllConnectionStringPair;
+
+                    if (_SpecificModule_MySQL_SupportMutilDB_RO_ConnectionString == null || _SpecificModule_MySQL_SupportMutilDB_RO_ConnectionString.Count == 0)
+                    {
+                        _SpecificModule_MySQL_SupportMutilDB_RO_ConnectionString = new List<string>();
+                        foreach (var item in pairs)
+                        {
+                            if (item.Key != "LocalSqlServer")
+                            {
+                                _SpecificModule_MySQL_SupportMutilDB_RO_ConnectionString.Add(item.Value);
+                            }
+                        }
+                    }
+                }
+                return _SpecificModule_MySQL_SupportMutilDB_RO_ConnectionString;
+            }
+        }
+
+
+        private static List<string> _SpecificModule_MySQL_SupportMutilDB_WO_ConnectionString;
+        public static List<string> SpecificModule_MySQL_SupportMutilDB_WO_ConnectionString
+        {
+            get
+            {
+                var ConfigPath = ConfigurationManager.AppSettings["SpecificModule_MySQL_WO_SupportMutilDatabase_ConnectionStringConfigFilePath"];
+                if (!string.IsNullOrEmpty(ConfigPath))
+                {
+                    string path = System.IO.Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, System.IO.Path.Combine(ConfigPath.Split('/')));
+                    StandardConfigFileReader scr = new StandardConfigFileReader(path);
+                    Dictionary<string, string> pairs = scr.AllConnectionStringPair;
+
+                    if (_SpecificModule_MySQL_SupportMutilDB_WO_ConnectionString == null || _SpecificModule_MySQL_SupportMutilDB_WO_ConnectionString.Count == 0)
+                    {
+                        _SpecificModule_MySQL_SupportMutilDB_WO_ConnectionString = new List<string>();
+                        foreach (var item in pairs)
+                        {
+                            if (item.Key != "LocalSqlServer")
+                            {
+                                _SpecificModule_MySQL_SupportMutilDB_WO_ConnectionString.Add(item.Value);
+                            }
+                        }
+                    }
+                }
+                return _SpecificModule_MySQL_SupportMutilDB_WO_ConnectionString;
+            }
+        }
+
+
+
+
+
+        private static List<string> _SpecificModule_MongoDB_SupportMutilDB_RO_ConnectionString;
+        public static List<string> SpecificModule_MongoDB_SupportMutilDB_RO_ConnectionString
+        {
+            get
+            {
+                var ConfigPath = ConfigurationManager.AppSettings["SpecificModule_MongoDB_RO_SupportMutilDatabase_ConnectionStringConfigFilePath"];
+                if (!string.IsNullOrEmpty(ConfigPath))
+                {
+                    string path = System.IO.Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, System.IO.Path.Combine(ConfigPath.Split('/')));
+                    StandardConfigFileReader scr = new StandardConfigFileReader(path);
+                    Dictionary<string, string> pairs = scr.AllConnectionStringPair;
+
+                    if (_SpecificModule_MongoDB_SupportMutilDB_RO_ConnectionString == null || _SpecificModule_MongoDB_SupportMutilDB_RO_ConnectionString.Count == 0)
+                    {
+                        _SpecificModule_MongoDB_SupportMutilDB_RO_ConnectionString = new List<string>();
+                        foreach (var item in pairs)
+                        {
+                            if (item.Key != "LocalSqlServer")
+                            {
+                                _SpecificModule_MongoDB_SupportMutilDB_RO_ConnectionString.Add(item.Value);
+                            }
+                        }
+                    }
+                }
+                return _SpecificModule_MongoDB_SupportMutilDB_RO_ConnectionString;
+            }
+        }
+
+
+        private static List<string> _SpecificModule_MongoDB_SupportMutilDB_WO_ConnectionString;
+        public static List<string> SpecificModule_MongoDB_SupportMutilDB_WO_ConnectionString
+        {
+            get
+            {
+                var ConfigPath = ConfigurationManager.AppSettings["SpecificModule_MongoDB_WO_SupportMutilDatabase_ConnectionStringConfigFilePath"];
+                if (!string.IsNullOrEmpty(ConfigPath))
+                {
+                    string path = System.IO.Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, System.IO.Path.Combine(ConfigPath.Split('/')));
+                    StandardConfigFileReader scr = new StandardConfigFileReader(path);
+                    Dictionary<string, string> pairs = scr.AllConnectionStringPair;
+
+                    if (_SpecificModule_MongoDB_SupportMutilDB_WO_ConnectionString == null || _SpecificModule_MongoDB_SupportMutilDB_WO_ConnectionString.Count == 0)
+                    {
+                        _SpecificModule_MongoDB_SupportMutilDB_WO_ConnectionString = new List<string>();
+                        foreach (var item in pairs)
+                        {
+                            if (item.Key != "LocalSqlServer")
+                            {
+                                _SpecificModule_MongoDB_SupportMutilDB_WO_ConnectionString.Add(item.Value);
+                            }
+                        }
+                    }
+                }
+                return _SpecificModule_MongoDB_SupportMutilDB_WO_ConnectionString;
+            }
+        }
+
     }
-
-
 }

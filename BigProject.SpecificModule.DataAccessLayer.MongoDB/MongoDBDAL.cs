@@ -4,11 +4,11 @@ using BigProject.SpecificModule.Model;
 using BigProject.SpecificModule.DataInterfaceLayer;
 using System.Collections.Generic;
 
-namespace BigProject.SpecificModule.DataAccessLayer.MySQL
+namespace BigProject.SpecificModule.DataAccessLayer.MongoDB
 {
-    public class MySQLDAL : ISpecificModule_RO_Operations, ISpecificModule_WO_Operations
+    public class MongoDBDAL : ISpecificModule_RO_Operations, ISpecificModule_WO_Operations
     {
-        #region Properties
+#region Properties
         public List<string> connectionstrings;
         public List<string> ConnectionStrings
         {
@@ -21,16 +21,16 @@ namespace BigProject.SpecificModule.DataAccessLayer.MySQL
 
                 return connectionstrings;
             }
+
             set
             {
                 connectionstrings = value;
             }
         }
 
-        #endregion
-
-        #region Constractor
-        public MySQLDAL(string ConnectionString)
+#endregion
+#region Constractor
+        public MongoDBDAL(string ConnectionString)
         {
             connectionstrings = new List<string>();
             if (!connectionstrings.Contains(ConnectionString))
@@ -39,12 +39,12 @@ namespace BigProject.SpecificModule.DataAccessLayer.MySQL
             }
         }
 
-        public MySQLDAL(List<string> ConnectionStrings)
+        public MongoDBDAL(List<string> ConnectionStrings)
         {
             connectionstrings = ConnectionStrings;
         }
-        #endregion
 
+#endregion
         public DataSet getlist(string p_inputparameter)
         {
             throw new NotImplementedException();
@@ -54,6 +54,5 @@ namespace BigProject.SpecificModule.DataAccessLayer.MySQL
         {
             throw new NotImplementedException();
         }
-
     }
 }

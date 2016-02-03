@@ -40,8 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="MongoDBDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BigProject.SpecificModule.Model\BigProject.SpecificModule.Model.csproj">
+      <Project>{24e66b3e-57ab-4677-be50-c624bde373d8}</Project>
+      <Name>BigProject.SpecificModule.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BigProject.SpecificModuler.DataInterfaceLayer\BigProject.SpecificModule.DataInterfaceLayer.csproj">
+      <Project>{a4323c7f-73d4-4a20-99c8-720206b2a75b}</Project>
+      <Name>BigProject.SpecificModule.DataInterfaceLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

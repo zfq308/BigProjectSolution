@@ -45,6 +45,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BigProject.SpecificModule.DataAccessLayer.MongoDB\BigProject.SpecificModule.DataAccessLayer.MongoDB.csproj">
+      <Project>{ff9290ca-67e0-4a15-8029-92dcce02aad2}</Project>
+      <Name>BigProject.SpecificModule.DataAccessLayer.MongoDB</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BigProject.SpecificModule.DataAccessLayer.MySQL\BigProject.SpecificModule.DataAccessLayer.MySQL.csproj">
       <Project>{867fef72-425c-44ad-9b76-e666cd5fe5c3}</Project>
       <Name>BigProject.SpecificModule.DataAccessLayer.MySQL</Name>
