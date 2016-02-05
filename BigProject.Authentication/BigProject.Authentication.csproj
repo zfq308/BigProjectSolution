@@ -32,18 +32,36 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Class2.cs" />
+    <Compile Include="APIIdentity.cs" />
+    <Compile Include="APILogin.cs" />
+    <Compile Include="APILoginAuth.cs" />
+    <Compile Include="APIPrincipal.cs" />
+    <Compile Include="GlobalStatics.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BigProject.SpecificModule.Business\BigProject.SpecificModule.Business.csproj">
+      <Project>{fc102a8c-998c-4f88-9201-47cd418a8aa4}</Project>
+      <Name>BigProject.SpecificModule.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BigProject.SpecificModule.Model\BigProject.SpecificModule.Model.csproj">
+      <Project>{24e66b3e-57ab-4677-be50-c624bde373d8}</Project>
+      <Name>BigProject.SpecificModule.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BigProject.Utils\BigProject.Utils.csproj">
+      <Project>{f333379d-e2d5-423e-9efd-cef7596b75f7}</Project>
+      <Name>BigProject.Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
